@@ -438,18 +438,60 @@
       if (!ok) form.querySelector(".invalid input").focus();
       return ok;
     };
-    $$("[data-send]", form).forEach((btn) => btn.addEventListener("click", () => {
+    $("[data-send='wa']", form).addEventListener("click", () => {
       if (!validate()) return;
-      const msg = buildMessage();
-      if (btn.dataset.send === "wa") {
-        window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(msg)}`, "_blank", "noopener");
-      } else {
-        const org = form.elements.org.value.trim();
-        const subject = `Soul Talks enquiry${org ? " — " + org : ""}`;
-        window.location.href = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(msg)}`;
+      window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(buildMessage())}`, "_blank", "noopener");
+    });
+
+    // Enquiries are emailed to EMAIL via FormSubmit (formsubmit.co), no backend needed.
+    const sendBtn = $("#sendBtn"), sendLabel = $("#sendBtn span"), success = $("#formSuccess");
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      if (!validate()) return;
+      const fd = new FormData(form);
+      if (fd.get("_honey")) return; // bot
+      const org = fd.get("org").trim(), contact = fd.get("contact").trim();
+      const payload = {
+        Name: fd.get("name").trim(),
+        Organisation: org || "—",
+        Contact: contact,
+        "Team size": fd.get("size") || "—",
+        "Interested in": fd.getAll("program").join(", ") || "—",
+        Message: fd.get("msg").trim() || "—",
+        _subject: `New Soul Talks enquiry${org ? " from " + org : ""}`,
+        _template: "table",
+      };
+      if (/^\S+@\S+\.\S+$/.test(contact)) payload._replyto = contact;
+
+      sendBtn.disabled = true;
+      sendLabel.textContent = "Sending…";
+      err.textContent = "";
+      try {
+        const res = await fetch(`https://formsubmit.co/ajax/${EMAIL}`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(payload),
+        });
+        const data = await res.json().catch(() => ({}));
+        if (!res.ok || String(data.success) !== "true") throw new Error(data.message || res.status);
+        $("#thanksName").textContent = `, ${payload.Name.split(" ")[0]}`;
+        $$(":scope > :not(.form-success)", form).forEach((el) => (el.hidden = true));
+        success.hidden = false;
+        success.focus();
+      } catch {
+        err.innerHTML = `Sorry, the message couldn't be sent. Please try WhatsApp, or email <a href="mailto:${EMAIL}">${EMAIL}</a>.`;
+      } finally {
+        sendBtn.disabled = false;
+        sendLabel.textContent = "Send Enquiry";
       }
-    }));
-    form.addEventListener("submit", (e) => e.preventDefault());
+    });
+
+    $("#newEnquiry").addEventListener("click", () => {
+      form.reset();
+      success.hidden = true;
+      $$(":scope > :not(.form-success)", form).forEach((el) => (el.hidden = false));
+      form.elements.name.focus();
+    });
     form.addEventListener("input", (e) => {
       const f = e.target.closest(".field.invalid");
       if (f && e.target.value.trim()) { f.classList.remove("invalid"); if (!$(".field.invalid", form)) err.textContent = ""; }

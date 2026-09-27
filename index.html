@@ -435,10 +435,17 @@
             <label><input type="checkbox" name="program" value="A custom experience"><span>Something custom</span></label>
           </fieldset>
           <label class="field"><span>Tell us about the occasion</span><textarea name="msg" rows="3" placeholder="e.g. Wellness day for our Pune office in March"></textarea></label>
+          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <p class="form-error" id="formError" role="alert"></p>
           <div class="form-actions">
-            <button type="button" class="btn btn-gold" data-send="wa"><svg><use href="#i-wa"/></svg>Send on WhatsApp</button>
-            <button type="button" class="btn btn-ghost" data-send="mail"><svg><use href="#i-mail"/></svg>Send by Email</button>
+            <button type="submit" class="btn btn-gold" id="sendBtn"><svg><use href="#i-mail"/></svg><span>Send Enquiry</span></button>
+            <button type="button" class="btn btn-ghost" data-send="wa"><svg><use href="#i-wa"/></svg>WhatsApp instead</button>
+          </div>
+          <div class="form-success" id="formSuccess" hidden tabindex="-1">
+            <svg class="fs-lotus"><use href="#lotus"/></svg>
+            <h3>Thank you<span id="thanksName"></span></h3>
+            <p>Your enquiry has reached Ruchika. She'll get back to you within a day or two to plan something beautiful for your team.</p>
+            <button type="button" class="btn btn-ghost btn-sm" id="newEnquiry">Send another enquiry</button>
           </div>
         </form>
       </div>

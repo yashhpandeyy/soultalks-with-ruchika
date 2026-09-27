@@ -594,6 +594,13 @@ button { font: inherit; color: inherit; }
 .form-error { min-height: 1.4em; margin: 0 0 8px; color: #f3a7bd; font-size: 15px; }
 .form-actions { display: flex; flex-wrap: wrap; gap: 12px; }
 .form-actions .btn { flex: 1 1 200px; }
+.form-actions .btn:disabled { opacity: .7; cursor: wait; transform: none; }
+.form-error a { color: var(--gold-hi); }
+.hp { position: absolute !important; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.form-success { text-align: center; padding: 30px 10px; outline: none; animation: rise .9s var(--ease) both; }
+.fs-lotus { width: 90px; height: 68px; margin: 0 auto 18px; color: var(--gold); filter: drop-shadow(0 0 14px rgba(232,192,122,.6)); }
+.form-success h3 { font-family: var(--f-script); font-weight: 400; font-size: clamp(44px, 6vw, 60px); line-height: 1.1; color: var(--gold-hi); margin: 0 0 12px; }
+.form-success p { color: var(--text-soft); max-width: 40ch; margin: 0 auto 26px; }
 
 /* ---------- footer ---------- */
 .footer { position: relative; z-index: 1; text-align: center; padding: 70px var(--gutter) 90px; border-top: 1px solid var(--line); background: var(--night); }
