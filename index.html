@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soul Talks with Ruchika — Experiential Corporate Wellness</title>
+  <meta name="description" content="Soul Talks with Ruchika creates immersive corporate wellness and employee-engagement experiences that help teams pause, reset and reconnect." />
+  <meta name="theme-color" content="#0d0820" />
+  <meta property="og:title" content="Soul Talks with Ruchika" />
+  <meta property="og:description" content="Experiential corporate wellness & employee engagement. Pause. Reset. Reconnect." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Marcellus&family=Allura&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script>document.documentElement.classList.add("js");</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 90'%3E%3Cg fill='none' stroke='%23e8c07a' stroke-width='5'%3E%3Cpath d='M60 8C48 26 48 50 60 66 72 50 72 26 60 8Z'/%3E%3Cpath d='M58 68C38 68 18 56 10 38 28 38 46 50 58 68Z'/%3E%3Cpath d='M62 68C82 68 102 56 110 38 92 38 74 50 62 68Z'/%3E%3C/g%3E%3C/svg%3E" />
+</head>
+<body>
+
+<!-- ================= SVG ICON SPRITE ================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7e2b0"/><stop offset=".5" stop-color="#e3b567"/><stop offset="1" stop-color="#b9843f"/>
+    </linearGradient>
+  </defs>
+  <symbol id="lotus" viewBox="0 0 120 90">
+    <g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M60 6C47 25 47 50 60 68 73 50 73 25 60 6Z"/>
+      <path d="M60 68C44 60 33 42 35 22 50 30 58 47 60 68Z"/>
+      <path d="M60 68C76 60 87 42 85 22 70 30 62 47 60 68Z"/>
+      <path d="M58 70C38 70 17 58 8 38 27 37 46 50 58 70Z"/>
+      <path d="M62 70C82 70 103 58 112 38 93 37 74 50 62 70Z"/>
+      <path d="M22 78Q60 90 98 78"/>
+    </g>
+  </symbol>
+  <g id="icons">
+    <symbol id="i-lotus" viewBox="0 0 24 24"><path d="M12 4c-2.5 3-2.5 8 0 11 2.5-3 2.5-8 0-11zM12 15c-3-1-5.5-4-5.5-7.5 3 .6 5 3.5 5.5 7.5zM12 15c3-1 5.5-4 5.5-7.5-3 .6-5 3.5-5.5 7.5zM11.5 16c-4 0-7-2-8.5-5 3.5 0 6.5 2 8.5 5zM12.5 16c4 0 7-2 8.5-5-3.5 0-6.5 2-8.5 5zM5 19.5q7 2.5 14 0"/></symbol>
+    <symbol id="i-wind" viewBox="0 0 24 24"><path d="M3 8h10a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h7"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="7.5" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6M16 4.6a3 3 0 0 1 0 5.8M18 14.3c1.8.7 3 2.9 3 5.7"/></symbol>
+    <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M12 21v-9M12 12C12 7.5 9 4.5 4 4.5c0 4.3 3 7.5 8 7.5zM12 14c0-3.4 2.3-6 7-6 0 4-3 6-7 6z"/></symbol>
+    <symbol id="i-heart" viewBox="0 0 24 24"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.3a4.2 4.2 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z"/></symbol>
+    <symbol id="i-link" viewBox="0 0 24 24"><circle cx="7" cy="12" r="3.5"/><circle cx="17" cy="12" r="3.5"/><path d="M10.5 12h3M7 4v4.5M17 15.5V20"/></symbol>
+    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.8-7 10-7 10 7 10 7-3.8 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></symbol>
+    <symbol id="i-candle" viewBox="0 0 24 24"><rect x="8.5" y="11" width="7" height="10" rx="1"/><path d="M12 3c2 2.4 2 4.6 0 6.2C10 7.6 10 5.4 12 3zM5 21h14"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></symbol>
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 3l2.1 6.1L20 11l-5.9 1.9L12 19l-2.1-6.1L4 11l5.9-1.9z"/><path d="M19 3v3M17.5 4.5h3"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a6.8 6.8 0 0 0 10.5 10.5z"/></symbol>
+    <symbol id="i-cards" viewBox="0 0 24 24"><rect x="4" y="5" width="9" height="14" rx="1.5" transform="rotate(-10 8.5 12)"/><rect x="11" y="5" width="9" height="14" rx="1.5" transform="rotate(8 15.5 12)"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M5 21V4M5 4h12l-2.5 4L17 12H5"/></symbol>
+    <symbol id="i-brief" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5h6v2M3 12.5h18"/></symbol>
+    <symbol id="i-smile" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1.8 2 5.2 2 7 0M9 9.5h.01M15 9.5h.01"/></symbol>
+    <symbol id="i-gift" viewBox="0 0 24 24"><rect x="3.5" y="9" width="17" height="11.5" rx="1"/><path d="M3 9h18M12 9v11.5M12 9C10 5 6.5 5 7 7.5S12 9 12 9zM12 9c2-4 5.5-4 5-1.5S12 9 12 9z"/></symbol>
+    <symbol id="i-female" viewBox="0 0 24 24"><circle cx="12" cy="8.5" r="5.5"/><path d="M12 14v7.5M8.8 18.5h6.4"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9.5 2.5h5"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 3.5h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.6 6.6l1.4-2.3 4.5 1.8V19a2 2 0 0 1-2 2A17 17 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></symbol>
+    <symbol id="i-insta" viewBox="0 0 24 24"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17 7h.01"/></symbol>
+    <symbol id="i-wa" viewBox="0 0 24 24"><path d="M4 20l1.2-4A8.5 8.5 0 1 1 8.3 19z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .8a5 5 0 0 1-2.2-2.2l.8-1-1-2z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+    <symbol id="i-sound" viewBox="0 0 24 24"><path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z"/><path class="wave" d="M15.5 9a4 4 0 0 1 0 6M18 6.5a7.5 7.5 0 0 1 0 11"/></symbol>
+  </g>
+</svg>
+
+<!-- ================= AMBIENT LAYERS ================= -->
+<canvas id="sky" aria-hidden="true"></canvas>
+<div class="cursor-glow" aria-hidden="true"></div>
+<div class="progress" aria-hidden="true"><span></span></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <a href="#top" class="brand" aria-label="Soul Talks with Ruchika — home">
+    <svg class="brand-lotus"><use href="#lotus"/></svg>
+    <span class="brand-text">Soul Talks <em>with Ruchika</em></span>
+  </a>
+  <nav class="nav-links" id="navLinks" aria-label="Main">
+    <a href="#about">About</a>
+    <a href="#experiences">Experiences</a>
+    <a href="#programs">Programs</a>
+    <a href="#mystic">Pick a Card</a>
+    <a href="#contact" class="btn btn-gold btn-sm">Plan a Session</a>
+  </nav>
+  <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span></button>
+</header>
+
+<main id="top">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="hero">
+    <div class="hero-corner left" data-depth="0.4">People<br>Calmer<br>Teams<br>Brighter<br>Tomorrows</div>
+    <div class="hero-corner right" data-depth="0.4">Wellness<br>Beyond<br>The<br>Ordinary</div>
+
+    <div class="moon-wrap" data-depth="0.8"><div class="moon"></div></div>
+
+    <div class="hero-content" data-depth="0.25">
+      <svg class="hero-lotus"><use href="#lotus"/></svg>
+      <h1 class="hero-title">
+        <span class="t-main">Soul Talks</span>
+        <span class="t-script">with Ruchika</span>
+      </h1>
+      <p class="hero-sub">Experiential Corporate Wellness<br class="br-m"> &amp; Employee Engagement</p>
+      <p class="hero-mantra" aria-label="Pause. Reset. Reconnect.">
+        <span>Pause.</span> <span>Reset.</span> <span>Reconnect.</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#experiences" class="btn btn-gold">Explore Experiences</a>
+        <a href="#breathe" class="btn btn-ghost">Take a 1-minute Reset</a>
+      </div>
+    </div>
+
+    <svg class="mountains m-back" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+      <defs><linearGradient id="mb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a2f7a"/><stop offset="1" stop-color="#1a0f3a"/></linearGradient></defs>
+      <path fill="url(#mb)" d="M0 220 L120 150 L200 190 L330 70 L440 170 L560 110 L650 160 L760 60 L880 150 L1000 100 L1110 170 L1240 80 L1340 150 L1440 120 L1440 320 L0 320Z"/>
+    </svg>
+    <svg class="mountains m-front" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true">
+      <defs><linearGradient id="mf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1850"/><stop offset="1" stop-color="#0d0820"/></linearGradient></defs>
+      <path fill="url(#mf)" d="M0 260 L90 210 L180 240 L300 160 L420 250 L540 200 L640 250 L720 230 L820 260 L940 190 L1060 250 L1180 200 L1300 250 L1440 210 L1440 320 L0 320Z"/>
+    </svg>
+    <div class="mist" aria-hidden="true"></div>
+
+    <a href="#pillars" class="scroll-cue" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ================= PILLARS ================= -->
+  <section class="pillars" id="pillars">
+    <div class="pillar reveal"><svg><use href="#i-lotus"/></svg><span>Calmer<br>People</span></div>
+    <div class="pillar reveal"><svg><use href="#i-users"/></svg><span>Stronger<br>Teams</span></div>
+    <div class="pillar reveal"><svg><use href="#i-sprout"/></svg><span>Healthier<br>Workplaces</span></div>
+    <div class="pillar reveal"><svg><use href="#i-sun"/></svg><span>Brighter<br>Tomorrows</span></div>
+  </section>
+
+  <!-- ================= BREATHE ================= -->
+  <section class="breathe section" id="breathe">
+    <div class="container breathe-grid">
+      <div class="breathe-copy reveal">
+        <p class="eyebrow">Try it now</p>
+        <h2 class="h2">Take sixty seconds.<br><em>Just for you.</em></h2>
+        <p class="lead">This is a small taste of <strong>The 30-Minute Reset</strong>. Follow the light and let your breath slow down. Three rounds is enough to notice a shift.</p>
+        <ul class="breathe-steps">
+          <li><b>4s</b> breathe in</li>
+          <li><b>4s</b> hold gently</li>
+          <li><b>6s</b> breathe out slowly</li>
+        </ul>
+        <div class="breathe-actions">
+          <button class="btn btn-gold" id="breatheBtn" type="button">Begin the reset</button>
+          <span class="breathe-count" id="breatheCount" aria-live="polite"></span>
+        </div>
+      </div>
+      <div class="orb-stage reveal" aria-live="polite">
+        <div class="orb-rings"><i></i><i></i><i></i></div>
+        <div class="orb" id="orb"></div>
+        <div class="orb-label"><span id="orbText">Ready when you are</span><small id="orbTimer"></small></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="about section parchment" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-head reveal">
+          <p class="eyebrow dark">About</p>
+          <h2 class="h2 dark">Soul Talks<br><span>with Ruchika</span></h2>
+          <p class="about-tag">Meaningful Experiences.<br>Happier People. Stronger Teams.</p>
+        </div>
+        <div class="about-body reveal">
+          <p>Soul Talks creates <strong>immersive wellness and employee-engagement experiences</strong> designed to help teams pause from everyday work pressure, reconnect with themselves and their colleagues, and return with greater clarity, calm and positive energy.</p>
+          <p>Our sessions combine mindfulness, guided relaxation, self-reflection, intuitive experiences and holistic wellness practices, customised around your organisation's people and objectives.</p>
+          <blockquote class="quote">
+            <p>When people feel good within, they do great together.</p>
+            <cite>Ruchika</cite>
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="approach">
+        <div class="approach-head reveal">
+          <h3 class="h3 dark">Our Approach</h3>
+          <p>A collaborative, customised journey.</p>
+        </div>
+        <ol class="journey" id="journey">
+          <li class="reveal"><span class="j-dot"><svg><use href="#i-eye"/></svg></span><b>Understand</b><small>Your needs</small></li>
+          <li class="reveal"><span class="j-dot"><svg><use href="#i-spark"/></svg></span><b>Design</b><small>Customised plan</small></li>
+          <li class="reveal"><span class="j-dot"><svg><use href="#i-users"/></svg></span><b>Experience</b><small>Engaging sessions</small></li>
+          <li class="reveal"><span class="j-dot"><svg><use href="#i-sprout"/></svg></span><b>Reflect</b><small>Key takeaways</small></li>
+          <li class="reveal"><span class="j-dot"><svg><use href="#i-sun"/></svg></span><b>Reset</b><small>Lasting impact</small></li>
+        </ol>
+        <div class="unique reveal">
+          <span class="inf">∞</span>
+          <p><b>Every organisation is unique.</b> Experiences can be customised to your choice.</p>
+        </div>
+      </div>
+      <p class="whisper reveal">Same People. Brighter Days.</p>
+    </div>
+  </section>
+
+  <!-- ================= CORE AREAS ================= -->
+  <section class="areas section" id="experiences">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Our Core Areas</p>
+        <h2 class="h2">Curated experiences for<br><em>today's workplaces</em></h2>
+      </div>
+      <div class="area-grid">
+        <article class="area reveal"><span class="a-ico wine"><svg><use href="#i-lotus"/></svg></span><h3>Workplace Stress &amp; Burnout Reset</h3><p>Release built-up pressure and come back to work lighter.</p></article>
+        <article class="area reveal"><span class="a-ico wine"><svg><use href="#i-wind"/></svg></span><h3>Mindfulness &amp; Relaxation Experiences</h3><p>Guided stillness that settles busy minds.</p></article>
+        <article class="area reveal"><span class="a-ico"><svg><use href="#i-smile"/></svg></span><h3>Employee Engagement &amp; Fun Fridays</h3><p>Playful, meaningful sessions people actually look forward to.</p></article>
+        <article class="area reveal"><span class="a-ico"><svg><use href="#i-sprout"/></svg></span><h3>Self-Awareness &amp; Personal Growth</h3><p>Reflection that turns insight into everyday change.</p></article>
+        <article class="area reveal"><span class="a-ico"><svg><use href="#i-female"/></svg></span><h3>Women's Wellness Experiences</h3><p>Spaces for confidence, balance and inner strength.</p></article>
+        <article class="area reveal"><span class="a-ico"><svg><use href="#i-link"/></svg></span><h3>Team Connection &amp; Reflection</h3><p>Rebuild trust and warmth between colleagues.</p></article>
+        <article class="area reveal"><span class="a-ico"><svg><use href="#i-eye"/></svg></span><h3>Guided Visualization &amp; Intention Setting</h3><p>See where you're going, then set the intention to get there.</p></article>
+        <article class="area reveal"><span class="a-ico"><svg><use href="#i-candle"/></svg></span><h3>Experiential Wellness Desks</h3><p>A calm one-on-one corner inside your event.</p></article>
+        <article class="area reveal"><span class="a-ico"><svg><use href="#i-sun"/></svg></span><h3>Wellness Days &amp; Corporate Events</h3><p>Full-day journeys designed around your people.</p></article>
+        <article class="area reveal"><span class="a-ico"><svg><use href="#i-spark"/></svg></span><h3>Custom Employee Wellness Experiences</h3><p>Built from scratch for your goals and culture.</p></article>
+      </div>
+      <p class="script-line reveal">Small Experiences. Big Shifts.</p>
+    </div>
+  </section>
+
+  <!-- ================= PROGRAMS ================= -->
+  <section class="programs section" id="programs">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">Our Signature Programs</p>
+        <h2 class="h2">Thoughtfully designed.<br><em>Beautifully delivered.</em></h2>
+      </div>
+
+      <div class="prog-shell reveal">
+        <div class="prog-tabs" role="tablist" aria-label="Signature programs">
+          <button role="tab" class="prog-tab active" aria-selected="true" aria-controls="p1" id="t1"><i>01</i><span>The 30-Minute Reset</span></button>
+          <button role="tab" class="prog-tab" aria-selected="false" aria-controls="p2" id="t2" tabindex="-1"><i>02</i><span>Mind Matters @ Work</span></button>
+          <button role="tab" class="prog-tab" aria-selected="false" aria-controls="p3" id="t3" tabindex="-1"><i>03</i><span>Mystic Friday</span></button>
+          <button role="tab" class="prog-tab" aria-selected="false" aria-controls="p4" id="t4" tabindex="-1"><i>04</i><span>She Rise</span></button>
+          <button role="tab" class="prog-tab" aria-selected="false" aria-controls="p5" id="t5" tabindex="-1"><i>05</i><span>Soul Talks Wellness Desk</span></button>
+        </div>
+
+        <div class="prog-panels">
+          <!-- 1 -->
+          <div class="prog-panel active" role="tabpanel" id="p1" aria-labelledby="t1">
+            <div class="prog-info">
+              <p class="prog-kicker">Stress Management &amp; Workplace Reset</p>
+              <h3>The 30-Minute Reset</h3>
+              <p class="prog-desc">A quick yet powerful session to help teams pause, breathe and reset. It fits easily into busy work schedules.</p>
+              <ul class="prog-list">
+                <li>Stress check-in</li><li>Guided breathing</li><li>Grounding techniques</li><li>Guided visualization</li><li>Energy reset</li><li>5-min reflection</li><li>Take-home “Reset Ritual”</li>
+              </ul>
+              <div class="prog-meta"><span><svg><use href="#i-clock"/></svg>30–60 mins</span><span><svg><use href="#i-users"/></svg>Teams / Departments</span></div>
+              <a href="#contact" class="btn btn-gold btn-sm" data-program="The 30-Minute Reset">Book this session</a>
+            </div>
+            <div class="prog-art art-reset">
+              <div class="sun"></div>
+              <div class="stones"><i></i><i></i><i></i><i></i></div>
+              <p class="art-script">Reset. Recharge.<br>Return Stronger.</p>
+            </div>
+          </div>
+          <!-- 2 -->
+          <div class="prog-panel" role="tabpanel" id="p2" aria-labelledby="t2" hidden>
+            <div class="prog-info">
+              <p class="prog-kicker">Emotional Wellness for Everyday Work Life</p>
+              <h3>Mind Matters @ Work</h3>
+              <p class="prog-desc">An experiential session for emotional awareness, resilience and a healthier, happier work life.</p>
+              <ul class="prog-list">
+                <li>Overthinking &amp; mental clutter</li><li>Emotional overload</li><li>Self-awareness</li><li>Emotional regulation</li><li>Work pressure</li><li>Boundaries</li><li>Mindfulness at work</li>
+              </ul>
+              <div class="prog-meta"><span><svg><use href="#i-clock"/></svg>60–90 mins</span><span><svg><use href="#i-users"/></svg>Teams / Departments</span></div>
+              <a href="#contact" class="btn btn-gold btn-sm" data-program="Mind Matters @ Work">Book this session</a>
+            </div>
+            <div class="prog-art art-mind">
+              <div class="neural"><i></i><i></i><i></i><i></i><b></b></div>
+              <p class="art-script">A Calmer Mind.<br>A Brighter You.</p>
+            </div>
+          </div>
+          <!-- 3 -->
+          <div class="prog-panel" role="tabpanel" id="p3" aria-labelledby="t3" hidden>
+            <div class="prog-info">
+              <p class="prog-kicker">An Experiential Self-Discovery Session</p>
+              <h3>Mystic Friday</h3>
+              <p class="prog-desc">An interactive, engaging session that brings curiosity, reflection and positive energy to the workplace.</p>
+              <ul class="prog-list">
+                <li>Pick a Card</li><li>Intuitive reflection</li><li>What's Your Energy Today?</li><li>Decode Your Intention</li><li>Intuition games</li><li>Future self visualization</li><li>Manifestation board</li>
+              </ul>
+              <div class="prog-meta"><span><svg><use href="#i-clock"/></svg>60–90 mins</span><span><svg><use href="#i-users"/></svg>Employee Engagement</span></div>
+              <a href="#contact" class="btn btn-gold btn-sm" data-program="Mystic Friday">Book this session</a>
+            </div>
+            <div class="prog-art art-mystic">
+              <div class="fan"><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="candles"><i></i><i></i></div>
+              <p class="art-script">Curiosity. Clarity.<br>Positive Energy.</p>
+            </div>
+          </div>
+          <!-- 4 -->
+          <div class="prog-panel" role="tabpanel" id="p4" aria-labelledby="t4" hidden>
+            <div class="prog-info">
+              <p class="prog-kicker">Women's Employee Wellness Program</p>
+              <h3>She Rise</h3>
+              <p class="prog-desc">A supportive, empowering experience that helps women feel stronger, more confident and more balanced.</p>
+              <ul class="prog-list">
+                <li>Confidence &amp; self-worth</li><li>Emotional balance</li><li>Work-life boundaries</li><li>Inner strength</li><li>Personal identity</li><li>Self-care practices</li><li>Guided reflection</li>
+              </ul>
+              <div class="prog-meta"><span><svg><use href="#i-clock"/></svg>60–90 mins</span><span><svg><use href="#i-female"/></svg>Women-focused</span></div>
+              <a href="#contact" class="btn btn-gold btn-sm" data-program="She Rise">Book this session</a>
+            </div>
+            <div class="prog-art art-rise">
+              <svg class="ribbon" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true">
+                <path d="M-20 200 C 80 120, 160 260, 250 160 S 380 90, 430 130" />
+                <path d="M-20 220 C 90 150, 170 280, 260 185 S 380 120, 430 160" />
+                <path d="M-20 240 C 100 180, 180 300, 270 210 S 380 150, 430 190" />
+              </svg>
+              <p class="art-script">Stronger Women.<br>Brighter Workplaces.</p>
+            </div>
+          </div>
+          <!-- 5 -->
+          <div class="prog-panel" role="tabpanel" id="p5" aria-labelledby="t5" hidden>
+            <div class="prog-info">
+              <p class="prog-kicker">A Private Experiential Wellness Corner</p>
+              <h3>Soul Talks Wellness Desk</h3>
+              <p class="prog-desc">A calming one-on-one wellness experience for employees during wellness days, events or offsites.</p>
+              <ul class="prog-list">
+                <li>Stress reset</li><li>Guided meditation</li><li>Intuitive reflection</li><li>Numerology-based self-discovery</li><li>Energy balancing</li><li>Goal clarity</li><li>Personal intention setting</li>
+              </ul>
+              <div class="prog-meta"><span><svg><use href="#i-clock"/></svg>Flexible</span><span><svg><use href="#i-sun"/></svg>Events, wellness days, offsites</span></div>
+              <a href="#contact" class="btn btn-gold btn-sm" data-program="Soul Talks Wellness Desk">Book this session</a>
+            </div>
+            <div class="prog-art art-desk">
+              <div class="board">Good Energy<br>Brighter People</div>
+              <div class="desk-candles"><span><b></b></span><span><b></b></span><span><b></b></span></div>
+              <div class="crystal"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= MYSTIC CARD DRAW ================= -->
+  <section class="mystic section" id="mystic">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow">A taste of Mystic Friday</p>
+        <h2 class="h2">What's your energy<br><em>today?</em></h2>
+        <p class="lead center">Take a breath, think of your week ahead, and choose the card that pulls you.</p>
+      </div>
+      <div class="deck" id="deck" aria-live="polite">
+        <!-- cards injected by JS -->
+      </div>
+      <div class="deck-actions">
+        <button type="button" class="btn btn-ghost" id="reshuffle" hidden>Shuffle &amp; draw again</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= IDEAL FOR ================= -->
+  <section class="ideal section parchment" id="ideal">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="eyebrow dark">Ideal For</p>
+        <h2 class="h2 dark">Wherever people<br><span>come together</span></h2>
+      </div>
+      <div class="ideal-grid">
+        <div class="ideal-item reveal"><span class="wine"><svg><use href="#i-users"/></svg></span>Corporate Teams</div>
+        <div class="ideal-item reveal"><span class="wine"><svg><use href="#i-brief"/></svg></span>HR &amp; L&amp;D Initiatives</div>
+        <div class="ideal-item reveal"><span><svg><use href="#i-sun"/></svg></span>Employee Engagement Programs</div>
+        <div class="ideal-item reveal"><span><svg><use href="#i-lotus"/></svg></span>Wellness Days</div>
+        <div class="ideal-item reveal"><span><svg><use href="#i-flag"/></svg></span>Leadership Offsites</div>
+        <div class="ideal-item reveal"><span><svg><use href="#i-female"/></svg></span>Women's Day Celebrations</div>
+        <div class="ideal-item reveal"><span><svg><use href="#i-smile"/></svg></span>Fun Fridays</div>
+        <div class="ideal-item reveal"><span><svg><use href="#i-gift"/></svg></span>Custom Corporate Events</div>
+      </div>
+      <figure class="testimonial reveal">
+        <blockquote>“A refreshing and memorable experience. The team felt lighter, more connected and re-energised.”</blockquote>
+        <figcaption>HR Leader</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= SIGNPOST ================= -->
+  <section class="signpost section" id="signpost">
+    <div class="container sign-grid">
+      <div class="sign-quote reveal">
+        <p class="script-big">“Wellness is not a luxury,<br>it's a foundation<br>for success.”</p>
+      </div>
+      <div class="signs" id="signs">
+        <div class="sign">Pause</div>
+        <div class="sign">Breathe</div>
+        <div class="sign">Reconnect</div>
+        <div class="sign">Grow</div>
+        <div class="sign">Together</div>
+        <i class="pole"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-copy reveal">
+          <p class="script-big gold">Let's Create<br>Happier Workplaces<br>Together.</p>
+          <ul class="values">
+            <li><svg><use href="#i-lotus"/></svg>Mindful People</li>
+            <li><svg><use href="#i-spark"/></svg>Meaningful Experiences</li>
+            <li><svg><use href="#i-sun"/></svg>Positive Cultures</li>
+            <li><svg><use href="#i-sprout"/></svg>Lasting Impact</li>
+          </ul>
+          <div class="contact-cards">
+            <a class="c-card" href="tel:+918758922203"><svg><use href="#i-phone"/></svg><span><small>Call Ruchika</small>+91 87589 22203</span></a>
+            <a class="c-card" href="https://wa.me/918758922203" target="_blank" rel="noopener"><svg><use href="#i-wa"/></svg><span><small>WhatsApp</small>Chat instantly</span></a>
+            <a class="c-card" href="mailto:soultalkswithruchika@gmail.com"><svg><use href="#i-mail"/></svg><span><small>Email</small>soultalkswithruchika@gmail.com</span></a>
+            <a class="c-card" href="https://instagram.com/soutalkswithruchika" target="_blank" rel="noopener"><svg><use href="#i-insta"/></svg><span><small>Instagram</small>@soutalkswithruchika</span></a>
+          </div>
+        </div>
+
+        <form class="enquiry reveal" id="enquiry" novalidate>
+          <div class="get-in-touch"><span></span>Plan your experience<span></span></div>
+          <div class="field-row">
+            <label class="field"><span>Your name *</span><input name="name" type="text" autocomplete="name" required /></label>
+            <label class="field"><span>Organisation</span><input name="org" type="text" autocomplete="organization" /></label>
+          </div>
+          <div class="field-row">
+            <label class="field"><span>Email or phone *</span><input name="contact" type="text" autocomplete="email" required /></label>
+            <label class="field"><span>Team size</span>
+              <select name="size">
+                <option value="">Select</option>
+                <option>Under 20</option><option>20–50</option><option>50–150</option><option>150+</option>
+              </select>
+            </label>
+          </div>
+          <fieldset class="chips">
+            <legend>I'm interested in</legend>
+            <label><input type="checkbox" name="program" value="The 30-Minute Reset"><span>30-Minute Reset</span></label>
+            <label><input type="checkbox" name="program" value="Mind Matters @ Work"><span>Mind Matters @ Work</span></label>
+            <label><input type="checkbox" name="program" value="Mystic Friday"><span>Mystic Friday</span></label>
+            <label><input type="checkbox" name="program" value="She Rise"><span>She Rise</span></label>
+            <label><input type="checkbox" name="program" value="Soul Talks Wellness Desk"><span>Wellness Desk</span></label>
+            <label><input type="checkbox" name="program" value="A custom experience"><span>Something custom</span></label>
+          </fieldset>
+          <label class="field"><span>Tell us about the occasion</span><textarea name="msg" rows="3" placeholder="e.g. Wellness day for our Pune office in March"></textarea></label>
+          <p class="form-error" id="formError" role="alert"></p>
+          <div class="form-actions">
+            <button type="button" class="btn btn-gold" data-send="wa"><svg><use href="#i-wa"/></svg>Send on WhatsApp</button>
+            <button type="button" class="btn btn-ghost" data-send="mail"><svg><use href="#i-mail"/></svg>Send by Email</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <svg class="footer-lotus"><use href="#lotus"/></svg>
+  <p class="footer-name">Soul Talks with Ruchika</p>
+  <p class="footer-tag">People. Calmer. Teams. Brighter. Tomorrows.</p>
+  <p class="footer-small">Meaningful Experiences. Lasting Impact. · © <span id="year"></span></p>
+</footer>
+
+<button class="sound-toggle" id="soundToggle" type="button" aria-pressed="false" aria-label="Toggle ambient sound">
+  <svg><use href="#i-sound"/></svg><span>Ambient sound</span>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
