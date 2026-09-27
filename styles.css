@@ -295,6 +295,33 @@ button { font: inherit; color: inherit; }
 
 .about-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(30px, 6vw, 90px); align-items: start; }
 .about-tag { font-family: var(--f-serif); font-size: clamp(22px, 2.4vw, 28px); line-height: 1.35; color: var(--ink-soft); margin: 0; }
+.portrait { margin: 44px 0 0; max-width: 360px; }
+.portrait-frame { position: relative; }
+.portrait-frame::before { /* offset gold arch */
+  content: ""; position: absolute; inset: -14px 14px 14px -14px; border: 1px solid var(--gold-lo); border-radius: 999px 999px 22px 22px; opacity: .7;
+}
+.portrait-frame img {
+  position: relative; width: 100%; height: auto; aspect-ratio: 3/4; object-fit: cover; object-position: 50% 20%;
+  border-radius: 999px 999px 22px 22px; box-shadow: 0 40px 70px -30px rgba(59,33,112,.7), 0 0 0 6px rgba(255,255,255,.55);
+  transition: transform 1s var(--ease);
+}
+.portrait:hover .portrait-frame img { transform: translate(4px, -4px); }
+.portrait figcaption { display: flex; align-items: baseline; gap: 14px; margin-top: 18px; padding-left: 6px; }
+.portrait figcaption span { font-family: var(--f-script); font-size: 46px; line-height: 1; color: var(--wine); }
+.portrait figcaption small { font-family: var(--f-caps); font-size: 12px; letter-spacing: .22em; text-transform: uppercase; color: var(--bronze); }
+
+/* ---------- in the room ---------- */
+.inroom { background: radial-gradient(50% 50% at 30% 50%, rgba(107,45,107,.3), transparent 70%); }
+.room-grid { display: grid; grid-template-columns: 1.55fr 1fr; gap: 20px; }
+.room { position: relative; margin: 0; border-radius: 26px; overflow: hidden; border: 1px solid var(--line); box-shadow: 0 50px 90px -40px rgba(0,0,0,.8); min-height: 560px; }
+.room img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform 1.6s var(--ease), filter 1.6s; filter: saturate(.92); }
+.room-wide img { object-position: 60% 40%; }
+.room-tall img { object-position: 50% 30%; }
+.room:hover img { transform: scale(1.05); filter: saturate(1.05); }
+.room::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(13,8,32,.85)); pointer-events: none; }
+.room figcaption { position: absolute; left: 26px; right: 26px; bottom: 22px; z-index: 1; color: var(--text-soft); font-size: 15px; }
+.room figcaption span { display: block; font-family: var(--f-script); font-size: 40px; line-height: 1.1; color: var(--gold-hi); }
+
 .about-body p { font-size: 18px; color: var(--ink-soft); margin: 0 0 20px; }
 .about-body strong { color: var(--wine); font-weight: 500; }
 .quote {
@@ -636,7 +663,10 @@ button { font: inherit; color: inherit; }
   .ideal-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 860px) {
-  .breathe-grid, .about-grid, .contact-grid, .sign-grid { grid-template-columns: 1fr; }
+  .breathe-grid, .about-grid, .contact-grid, .sign-grid, .room-grid { grid-template-columns: 1fr; }
+  .room-wide { min-height: 0; aspect-ratio: 4/3; }
+  .room-tall { min-height: 0; aspect-ratio: 3/4; }
+  .portrait { margin-left: auto; margin-right: auto; max-width: 320px; }
   .prog-panel { grid-template-columns: 1fr; }
   .prog-art { order: -1; min-height: 280px; }
   .sign-quote { text-align: center; }
