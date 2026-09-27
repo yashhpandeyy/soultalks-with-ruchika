@@ -410,7 +410,10 @@
           </div>
         </div>
 
-        <form class="enquiry reveal" id="enquiry" novalidate>
+        <form class="enquiry reveal" id="enquiry" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="enquiry" />
+          <input type="hidden" name="subject" value="New Soul Talks enquiry" />
+          <input type="hidden" name="programs" value="" />
           <div class="get-in-touch"><span></span>Plan your experience<span></span></div>
           <div class="field-row">
             <label class="field"><span>Your name *</span><input name="name" type="text" autocomplete="name" required /></label>
@@ -435,7 +438,7 @@
             <label><input type="checkbox" name="program" value="A custom experience"><span>Something custom</span></label>
           </fieldset>
           <label class="field"><span>Tell us about the occasion</span><textarea name="msg" rows="3" placeholder="e.g. Wellness day for our Pune office in March"></textarea></label>
-          <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
+          <input type="text" name="bot-field" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true" />
           <p class="form-error" id="formError" role="alert"></p>
           <div class="form-actions">
             <button type="submit" class="btn btn-gold" id="sendBtn"><svg><use href="#i-mail"/></svg><span>Send Enquiry</span></button>

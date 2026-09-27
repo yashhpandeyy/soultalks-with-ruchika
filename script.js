@@ -443,38 +443,32 @@
       window.open(`https://wa.me/${PHONE}?text=${encodeURIComponent(buildMessage())}`, "_blank", "noopener");
     });
 
-    // Enquiries are emailed to EMAIL via FormSubmit (formsubmit.co), no backend needed.
+    // Enquiries are captured by Netlify Forms (see the form's data-netlify attribute);
+    // email alerts are configured in the Netlify dashboard.
     const sendBtn = $("#sendBtn"), sendLabel = $("#sendBtn span"), success = $("#formSuccess");
     form.addEventListener("submit", async (e) => {
       e.preventDefault();
       if (!validate()) return;
       const fd = new FormData(form);
-      if (fd.get("_honey")) return; // bot
-      const org = fd.get("org").trim(), contact = fd.get("contact").trim();
-      const payload = {
-        Name: fd.get("name").trim(),
-        Organisation: org || "—",
-        Contact: contact,
-        "Team size": fd.get("size") || "—",
-        "Interested in": fd.getAll("program").join(", ") || "—",
-        Message: fd.get("msg").trim() || "—",
-        _subject: `New Soul Talks enquiry${org ? " from " + org : ""}`,
-        _template: "table",
-      };
-      if (/^\S+@\S+\.\S+$/.test(contact)) payload._replyto = contact;
+      if (fd.get("bot-field")) return; // bot
+      const org = fd.get("org").trim();
+      const name = fd.get("name").trim();
+      // Netlify keeps one value per field, so send the checked programs as one line.
+      fd.set("programs", fd.getAll("program").join(", "));
+      fd.delete("program");
+      fd.set("subject", `New Soul Talks enquiry from ${name}${org ? " (" + org + ")" : ""}`);
 
       sendBtn.disabled = true;
       sendLabel.textContent = "Sending…";
       err.textContent = "";
       try {
-        const res = await fetch(`https://formsubmit.co/ajax/${EMAIL}`, {
+        const res = await fetch("/", {
           method: "POST",
-          headers: { "Content-Type": "application/json", Accept: "application/json" },
-          body: JSON.stringify(payload),
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(fd).toString(),
         });
-        const data = await res.json().catch(() => ({}));
-        if (!res.ok || String(data.success) !== "true") throw new Error(data.message || res.status);
-        $("#thanksName").textContent = `, ${payload.Name.split(" ")[0]}`;
+        if (!res.ok) throw new Error(res.status);
+        $("#thanksName").textContent = `, ${name.split(" ")[0]}`;
         $$(":scope > :not(.form-success)", form).forEach((el) => (el.hidden = true));
         success.hidden = false;
         success.focus();
